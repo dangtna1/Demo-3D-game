@@ -50,8 +50,9 @@ export const npc_entity = (() => {
 
     _Init(params) {
       this._params = params;
+      const random_number = Math.floor(Math.random()*4);
       this._decceleration = new THREE.Vector3(-0.0005, -0.0001, -5.0);
-      this._acceleration = new THREE.Vector3(1, 0.25, 40.0);
+      this._acceleration = new THREE.Vector3(1 * random_number, 0.25 * random_number, 40.0 * random_number);
       this._velocity = new THREE.Vector3(0, 0, 0);
       this._position = new THREE.Vector3();
 

@@ -232,7 +232,7 @@ class HackNSlashDemo {
         damage: 3,
         renderParams: {
           name: 'Axe',
-          scale: 0.25,
+          scale: 1,
           icon: 'war-axe-64.png',
         },
     }));
@@ -351,11 +351,12 @@ class HackNSlashDemo {
           resourceName: m.resourceName,
           resourceTexture: m.resourceTexture,
       }));
+      const random_number = Math.floor(Math.random()*10);
       npc.AddComponent(
           new health_component.HealthComponent({
               health: 50,
               maxHealth: 50,
-              strength: 2,
+              strength: 2 * random_number,
               wisdomness: 2,
               benchpress: 3,
               curl: 1,

@@ -191,14 +191,14 @@ export const player_entity = (() => {
   
       const acc = this._acceleration.clone();
       if (input._keys.shift) {
-        acc.multiplyScalar(2.0);
+        acc.multiplyScalar(12.0);
       }
   
       if (input._keys.forward) {
-        velocity.z += acc.z * timeInSeconds;
+        velocity.z += acc.z * timeInSeconds * 3;
       }
       if (input._keys.backward) {
-        velocity.z -= acc.z * timeInSeconds;
+        velocity.z -= acc.z * timeInSeconds * 3;
       }
       if (input._keys.left) {
         _A.set(0, 1, 0);
